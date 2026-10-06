@@ -22,6 +22,9 @@ with sync_playwright() as p:
         page.set_viewport_size({'width': width, 'height': 900})
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'Overflow at {width}'
     page.set_viewport_size({'width': 390, 'height': 844})
+    page.mouse.move(150, 5)
+    page.wait_for_function("document.querySelector('nav').getBoundingClientRect().top > 0")
+    page.wait_for_timeout(650)
     page.locator('.menu').click()
     assert page.locator('.menu').get_attribute('aria-expanded') == 'true'
     page.locator('.nav-links a[href="#development"]').click()
