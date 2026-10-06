@@ -9,14 +9,15 @@ with sync_playwright() as p:
     page.on('pageerror', lambda error: errors.append(str(error)))
     page.goto((root / 'index.html').as_uri())
     assert page.title() == 'Kuru Studio — Art & Development'
-    page.locator('.hero .panel-copy.visible').wait_for()
+    page.locator('.hero .artwork.visible').wait_for()
+    assert page.locator('.hero h1,.hero .panel-copy,.hero .caption,.announcement').count() == 0
     assert page.locator('.hero .artwork').evaluate("el=>getComputedStyle(el).animationName") == 'drift'
     page.locator('.closing').scroll_into_view_if_needed()
     page.locator('.closing.visible').wait_for()
     reduced = browser.new_page(reduced_motion='reduce')
     reduced.goto((root / 'index.html').as_uri())
     assert reduced.locator('.hero .artwork').evaluate("el=>getComputedStyle(el).animationName") == 'none'
-    assert reduced.locator('.hero .panel-copy').evaluate("el=>getComputedStyle(el).opacity") == '1'
+    assert reduced.locator('.hero .artwork').evaluate("el=>getComputedStyle(el).opacity") == '1'
     reduced.close()
     for width in (1440, 768, 390, 320):
         page.set_viewport_size({'width': width, 'height': 900})
