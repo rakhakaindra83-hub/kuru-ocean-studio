@@ -10,6 +10,7 @@ with sync_playwright() as p:
     page.locator('.jelly-link').click()
     assert page.locator('.jelly-link').evaluate("el=>el.classList.contains('departing')")
     assert page.url != url
+    assert page.evaluate("window.__oceanAudio && window.__oceanAudio.state === 'running'")
     page.wait_for_url(url)
     assert 'Portfolio navigation verified' in page.content()
     reduced = browser.new_page(reduced_motion='reduce')
