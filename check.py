@@ -32,15 +32,9 @@ with sync_playwright() as p:
     assert page.locator('.menu').get_attribute('aria-expanded') == 'false'
     page.locator('[data-service="Website development"]').click()
     assert page.locator('dialog').evaluate('(d) => d.open')
-    assert page.locator('#service').input_value() == 'Website development'
-    page.locator('#name').fill('Kuru')
-    page.locator('#details').fill('Website portfolio art bertema ocean, responsive.')
-    with page.expect_download() as download:
-        page.locator('button[type="submit"]').click()
-    file = download.value
-    file.save_as(root / 'test-brief.txt')
-    text = (root / 'test-brief.txt').read_text(encoding='utf-8')
-    assert 'Nama: Kuru' in text and 'Website development' in text
+    assert page.locator('dialog a').count() == 3
+    assert page.locator('dialog a').first.get_attribute('href') == 'https://www.instagram.com/favv.vrk/'
+    assert page.locator('form').count() == 0
     page.locator('.close').click()
     assert not page.locator('dialog').evaluate('(d) => d.open')
     page.evaluate("document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible')); scrollTo(0,0)")
@@ -49,6 +43,6 @@ with sync_playwright() as p:
     page.set_viewport_size({'width': 1440, 'height': 1000})
     page.screenshot(path=str(root / 'desktop-preview.png'), full_page=True)
     assert not errors, errors
-    print('PASS: 4 viewport widths, mobile menu, dialog, service selection, brief download; no JavaScript errors.')
+    print('PASS: 4 viewport widths, mobile menu, contact dialog, social links; no JavaScript errors.')
     browser.close()
-    (root / 'test-brief.txt').unlink()
+
