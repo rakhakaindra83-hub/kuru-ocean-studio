@@ -1,7 +1,7 @@
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
-url = 'https://rakhakaindra83-hub.github.io/rakha-portfolio/'
+url = 'https://rakhakaindra83-hub.github.io/kuru-site/'
 with sync_playwright() as p:
     browser = p.chromium.launch(channel='msedge', headless=True)
     page = browser.new_page()
