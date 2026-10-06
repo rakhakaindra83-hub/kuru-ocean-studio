@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" shape-rendering="crispEdges" role="img" aria-label="Pixel art Himmel sang pahlawan dengan rambut biru, jubah dan pedang">
+<style>.hero{animation:idle 3s ease-in-out infinite;transform-origin:48px 78px}.cape{animation:cape 3s ease-in-out infinite;transform-origin:48px 43px}.spark{animation:shine 2s steps(2) infinite}@keyframes idle{50%{transform:translateY(-1px)}}@keyframes cape{50%{transform:skewX(-3deg)}}@keyframes shine{50%{opacity:.15}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<ellipse cx="48" cy="86" rx="22" ry="3" fill="#092c3a"/>
+<g class="hero">
+<g class="cape"><path fill="#0c1630" d="M32 42h32v12h4v26H28V54h4z"/><path fill="#eee7dc" d="M31 41h10v7h14v-7h10v18h4v22H53V67H43v14H27V59h4z"/><path fill="#a6afb9" d="M31 54h5v22h-5zm30 0h5v22h-5zM43 67h10v14H43z"/><path fill="#fbf3e1" d="M33 44h7v12h-7zm23 0h7v12h-7z"/></g>
+<path fill="#2b3445" d="M40 62h16v17h-3v6h-9v-6h-4z"/><path fill="#121d31" d="M39 80h8v6H36v-3h3zm11 0h7v3h3v3H49z"/>
+<path fill="#26395a" d="M38 43h20v21H38z"/><path fill="#486386" d="M41 46h14v13H41z"/><path fill="#d5ab66" d="M38 59h20v4H38z"/><path fill="#f1d18b" d="M46 59h5v4h-5z"/>
+<path fill="#e2b298" d="M43 36h11v9H43z"/><path fill="#f2d0b3" d="M36 23h25v11h-3v5h-6v3H42v-3h-6z"/><path fill="#c38c79" d="M36 29h3v7h-3zm19 7h3v3h-3z"/>
+<path fill="#28446f" d="M38 13h17v3h7v5h3v12h-5v-8h-4v-5h-8v3h-7v5h-6v7h-4V20h4v-4h3z"/><path fill="#77a2d2" d="M39 13h14v3h7v6h-7v-4h-5v5h-8v7h-6V20h5z"/><path fill="#a7c9e8" d="M40 14h10v3H40zm-4 6h5v5h-5z"/><path fill="#466da1" d="M48 20h5v5h-7v4h-5v-5h7zm9 3h6v8h-4v-5h-2z"/>
+<path fill="#233655" d="M40 29h4v2h-4zm12 0h4v2h-4z"/><path fill="#5a90c4" d="M41 29h2v2h-2zm12 0h2v2h-2z"/><path fill="#b88174" d="M46 36h5v1h-5z"/>
+<path fill="#d4dce3" d="M33 48h5v12h-5zm25 0h5v12h-5z"/><path fill="#edc7a8" d="M32 58h6v7h-6zm26 0h6v7h-6z"/>
+<g><path fill="#557482" d="M69 29h3v39h-3z"/><path fill="#d9edf0" d="M69 27h2v35h-2z"/><path fill="#89b5c7" d="M71 29h2v33h-2z"/><path fill="#d4b87b" d="M65 63h12v3H65z"/><path fill="#635048" d="M69 66h4v10h-4z"/><path fill="#d4b87b" d="M68 76h6v3h-6z"/></g>
+</g><g class="spark" fill="#bbf8ee"><path d="M77 35h2v6h-2zm-2 2h6v2h-6zM19 51h2v6h-2zm-2 2h6v2h-6z"/></g>
+</svg>
