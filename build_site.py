@@ -49,7 +49,7 @@ new_css = """
 }
 """
 
-# 2. Section HTML Testimoni dengan Foto Profil Asli Client
+# 2. Section HTML Testimoni (921611802855481436 = Ryouki, 1043076281316683856 = Camwynn)
 testi_html = """
 <!-- TESTIMONI KLIEN -->
 <section class="testimonials" id="testimonials" aria-labelledby="testi-title">
@@ -62,9 +62,9 @@ testi_html = """
   <article class="testimonial-card">
    <p class="testimonial-quote">Hasil commission rapi banget, detail sesuai brief dari awal, dan komunikasinya enak tanpa ribet. Recomended banget!</p>
    <a class="discord-card" href="https://discord.com/users/921611802855481436" target="_blank" rel="noopener noreferrer" aria-label="Buka profil Discord klien 921611802855481436">
-    <div class="discord-avatar"><img src="assets/camwynn-avatar.webp" alt="Avatar Camwynn"></div>
+    <div class="discord-avatar"><img src="assets/ryouki-avatar.png" alt="Avatar Ryouki"></div>
     <div class="discord-meta">
-     <div class="discord-tag"><span>Camwynn</span><span class="discord-badge">Verified</span></div>
+     <div class="discord-tag"><span>Ryoukii_</span><span class="discord-badge">Verified</span></div>
      <div class="discord-id">ID: 921611802855481436</div>
     </div>
     <span class="discord-link-icon" aria-hidden="true">↗</span>
@@ -73,9 +73,9 @@ testi_html = """
   <article class="testimonial-card">
    <p class="testimonial-quote">Pengerjaan video motion dan asetnya presisi, revisi ditanggapi cepat, dan delivery selalu tepat waktu. Keren pol!</p>
    <a class="discord-card" href="https://discord.com/users/1043076281316683856" target="_blank" rel="noopener noreferrer" aria-label="Buka profil Discord klien 1043076281316683856">
-    <div class="discord-avatar"><img src="assets/ggsyamandi-avatar.png" alt="Avatar ggsyamandi"></div>
+    <div class="discord-avatar"><img src="assets/camwynn-avatar.png" alt="Avatar Camwynn"></div>
     <div class="discord-meta">
-     <div class="discord-tag"><span>ggsyamandi</span><span class="discord-badge">Verified</span></div>
+     <div class="discord-tag"><span>Camwynn</span><span class="discord-badge">Verified</span></div>
      <div class="discord-id">ID: 1043076281316683856</div>
     </div>
     <span class="discord-link-icon" aria-hidden="true">↗</span>
@@ -193,4 +193,4 @@ final_encrypted_html = f"""<!DOCTYPE html>
 with open('C:/Users/TUF GAMING/code-demo/kuru-ocean-studio/index.html', 'w', encoding='utf-8') as f_idx:
     f_idx.write(final_encrypted_html)
 
-print('Updated and protected index.html with real profile photos successfully!')
+print('Updated and protected index.html with corrected Discord avatars successfully!')
