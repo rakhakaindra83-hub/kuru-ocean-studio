@@ -4,7 +4,7 @@ raw_path = 'C:/Users/TUF GAMING/code-demo/kuru-ocean-studio/clean_source.html'
 with open(raw_path, 'r', encoding='utf-8') as f:
     html = f.read()
 
-# 1. CSS styling (Tanpa section portfolio)
+# 1. CSS styling
 new_css = """
 /* --- TESTIMONIALS & DISCORD OWNER STYLES --- */
 .testimonials{max-width:1100px;margin:30px auto 40px;padding:60px 30px;position:relative}
@@ -21,8 +21,8 @@ new_css = """
 .testimonial-quote::after{content:"”";font-size:36px;line-height:0;margin-left:4px;vertical-align:-10px;color:var(--aqua);font-family:Georgia,serif}
 .discord-card{display:flex;align-items:center;gap:14px;padding:12px 16px;background:#051a27;border:1px solid #1b455b;border-radius:16px;text-decoration:none;color:inherit;transition:background .2s,border-color .2s}
 .discord-card:hover{background:#092a3e;border-color:var(--aqua)}
-.discord-avatar{width:46px;height:46px;border-radius:50%;background:#5865F2;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;box-shadow:0 4px 12px rgba(88,101,242,.35);overflow:hidden}
-.discord-avatar svg{width:26px;height:26px;fill:currentColor}
+.discord-avatar{width:46px;height:46px;border-radius:50%;background:#0b2535;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;border:1.5px solid var(--aqua)}
+.discord-avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .discord-meta{display:flex;flex-direction:column;min-width:0;flex:1}
 .discord-tag{font-size:14px;font-weight:700;color:#ecfdff;letter-spacing:-.01em;display:flex;align-items:center;gap:6px}
 .discord-badge{font-size:10px;padding:2px 7px;border-radius:999px;background:#5865f225;color:#8ba2ff;font-weight:600;border:1px solid rgba(88,101,242,.3)}
@@ -49,7 +49,7 @@ new_css = """
 }
 """
 
-# 2. Section HTML Testimoni (tanpa grid gambar karya)
+# 2. Section HTML Testimoni dengan Foto Profil Asli Client
 testi_html = """
 <!-- TESTIMONI KLIEN -->
 <section class="testimonials" id="testimonials" aria-labelledby="testi-title">
@@ -62,7 +62,7 @@ testi_html = """
   <article class="testimonial-card">
    <p class="testimonial-quote">Hasil commission rapi banget, detail sesuai brief dari awal, dan komunikasinya enak tanpa ribet. Recomended banget!</p>
    <a class="discord-card" href="https://discord.com/users/921611802855481436" target="_blank" rel="noopener noreferrer" aria-label="Buka profil Discord klien 921611802855481436">
-    <div class="discord-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg></div>
+    <div class="discord-avatar"><img src="assets/camwynn-avatar.webp" alt="Avatar Camwynn"></div>
     <div class="discord-meta">
      <div class="discord-tag"><span>Camwynn</span><span class="discord-badge">Verified</span></div>
      <div class="discord-id">ID: 921611802855481436</div>
@@ -73,7 +73,7 @@ testi_html = """
   <article class="testimonial-card">
    <p class="testimonial-quote">Pengerjaan video motion dan asetnya presisi, revisi ditanggapi cepat, dan delivery selalu tepat waktu. Keren pol!</p>
    <a class="discord-card" href="https://discord.com/users/1043076281316683856" target="_blank" rel="noopener noreferrer" aria-label="Buka profil Discord klien 1043076281316683856">
-    <div class="discord-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg></div>
+    <div class="discord-avatar"><img src="assets/ggsyamandi-avatar.png" alt="Avatar ggsyamandi"></div>
     <div class="discord-meta">
      <div class="discord-tag"><span>ggsyamandi</span><span class="discord-badge">Verified</span></div>
      <div class="discord-id">ID: 1043076281316683856</div>
@@ -193,4 +193,4 @@ final_encrypted_html = f"""<!DOCTYPE html>
 with open('C:/Users/TUF GAMING/code-demo/kuru-ocean-studio/index.html', 'w', encoding='utf-8') as f_idx:
     f_idx.write(final_encrypted_html)
 
-print('Updated and protected index.html without portfolio images successfully!')
+print('Updated and protected index.html with real profile photos successfully!')
